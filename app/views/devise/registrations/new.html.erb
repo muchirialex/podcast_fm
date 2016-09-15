@@ -1,10 +1,9 @@
 <div id="banner" class="sign_up_banner">
-      <h1>Create a Podcast, it's 100% free!</h1>
+  <h1>Create a podcast. It's 100% free.</h1>
 </div>
 
 <div id="form">
   <div class="wrapper_skinny">
-    
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
@@ -30,7 +29,7 @@
 
       <div class="field">
         <%= f.label :password %>
-        <% if @minimum_password_length %>
+        <% if @validatable %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
@@ -42,8 +41,8 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Sign up", class:"button button_highlight button_block" %>
+        <%= f.submit "Sign up", class: "button button_highlight button_block" %>
       </div>
     <% end %>
   </div>
-</div>    
+</div>

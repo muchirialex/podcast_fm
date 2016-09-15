@@ -1,196 +1,226 @@
 $white: #FFFFFF;
-$highlight: #d2674e;
-$dark: #22292e;
+$highlight: #EE7964;
+$dark: #2C3135;
 $light: #EDEFF5;
 
-body {
-	font-family: 'Open Sans', sans-serif;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: ‘Lato’, sans-serif;
+  background: $white;
+}
+
 .wrapper_wide {
-	width: 90%;
-	margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .wrapper {
-	width: 80%;
-	margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .wrapper_skinny {
-	width: 60%;
-	margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
-.cf:before, .cf:after {
-	content: " ";
-	display: table;
+.responsive_break {
+  white-space: nowrap;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-	clear: both;
+  clear: both;
+}
+
+#notice_wrapper {
+  width: 100%;
+  position: absolute;
+  background: rgba(208,103,82, 0.85);
+  z-index: 999;
+  p {
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1.5rem 0;
+  }
 }
 
 .button {
-	color: $white;
-	text-decoration: none;
-	font-size: 1rem;
-	padding: 1rem 2rem;
-	border-radius: 2rem;
-	outline: none;
-	border: none;
-	display: inline-block;
-	min-width: 8.5rem;
+  color: $white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+}
+
+.button_block {
+  display: block;
+  margin: 0 auto;
 }
 
 .button_highlight {
-	background: $highlight;
-	transition: background .4s ease-in-out;
-	&:hover {
-		background: darken($highlight, 7.5%);
-	}
+  background: $highlight;
+  transition: background .4s ease-in-out;
+  &:hover {
+   background: darken($highlight, 7.5%);
+  }
 }
 
 .button_white {
-	background: $white;
-	color: $dark;
-	transition: background .4s ease-in-out;
-	&:hover {
-		background: darken($white, 7.5%);
-	}
-}	
-
-
-.button_block {
-	display: block;
-	margin: 0 auto;
+  background: $white;
+  color: $dark;
+  transition: background .4s ease-in-out;
+  &:hover {
+   background: darken($white, 7.5%);
+  }
 }
+
 #main_header {
-	color: $dark;
-	background: $white;
-	padding: 2.5rem 0;
-#logo {
-		float: left;
-		text-transform: uppercase;
-		font-weight: 700;
-		color: $dark;
-		text-decoration: none;
-	}
-	nav {
-		float: right;
-		ul {
-			list-style: none;
-			margin: 0;
-			li {
-				display: inline;
-				margin-left: 2.5rem;
-				a {
-					color: $dark;
-					text-decoration: none;
-					}
-			}
-		}
-	}
+  color: $dark;
+  background: $white;
+  padding: 2.5rem 0;
+  #logo {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $dark;
+    text-decoration: none;
+  }
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        display: inline;
+        margin-left: 2rem;
+        position: relative;
+        a {
+          color: $dark;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.9rem;
+          &:hover {
+            color: $highlight;
+          }
+        }
+      }
+    }
+  }
 }
 
 #banner {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	margin-bottom: 4rem;
-	h1 {
-		text-align: center;
-		color: $white;
-		font-size: 3rem;
-		font-weight: 300;
-		letter-spacing: 1px;
-		margin: 0;
-		padding: 8rem 0;
-	}
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  h1 {
+    text-align: center;
+    padding: 8.5rem 0;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: $white;
+  }
 }
 
 .podcasts_banner {
-	background-image: image-url("podcasts_banner.jpg");
-}
-
-.sign_in_banner {
-	background-image: image-url("sign_in_banner.jpg");
+  background-image: image-url("podcasts_banner.jpg");
+  margin-bottom: 4rem;
 }
 
 .sign_up_banner {
-	background-image: image-url("sign_up_banner.jpg");
+  background-image: image-url("sign_up_banner.jpg");
 }
 
-.pagination:before, .pagination:after {
-	content: " ";
-	display: table;
+.sign_in_banner {
+  background-image: image-url("sign_in_banner.jpg");
+}
+
+.pagination:before,
+.pagination:after {
+  content: “ “;
+  display: table;
 }
 
 .pagination:after {
-	clear: both;
+  clear: both;
 }
 
 .pagination {
-	text-align: center;
-	margin: 1rem 0 5rem 0;
-	a, .previous_page, .current, .next_page {
-		padding: 0.75rem 1rem;
-		margin: 0 .25rem;
-		border-radius: .15rem;
-		line-height: 1.25rem;
-		text-decoration: none;
-		background: #EDEFF5;
-		font-weight: 700;
-		font-size: .7rem;
-		font-style: normal;
-		color: $dark;
-		&:hover {
-			background: $highlight;
-			color: $white;
-		}
-	}
-	.current {
-		background: $highlight;
-		color: $white;
-	}
-	.disabled {
-		color: #C0C0C0;
-		&:hover {
-			color: #C0C0C0;
-			background: #EDEFF5;
-		}
-	}
-}
-
-.field {
-	margin: .5rem 0 1.5rem 0;
-}
-
-input[type="email"], input[type="text"], input[type="password"], input[type="textarea"] {
-	width: 100%;
-	height: 2.5rem;
-	padding: .25rem 1rem;
-	background: $light;
-	border-radius: .35rem;
-	border: 1px solid darken($light, 5%);
-	margin-top: .5rem;
-}
-
-textarea {
-	width: 100%;
-	height: 2.5rem;
-	padding: .25rem 1rem;
-	background: $light;
-	border-radius: .35rem;
-	border: 1px solid darken($light, 5%);
-	min-height: 8rem;
-	margin-top: .5rem;
+  text-align: center;
+  margin: 2rem 0;
+  a, .previous_page, .current, .next_page {
+    padding: 0.75rem 1rem;
+    margin: 0 .25rem;
+    border-radius: .15rem;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: $light;
+    font-weight: 700;
+    font-size: .7rem;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: $white;
+    }
+  }
+  .disabled {
+    color: #C0C0C0;
+    &:hover {
+      color: #C0C0C0;
+    }
+  }
+  .current {
+    background: $highlight;
+    color: $white;
+  }
 }
 
 #form {
-	padding: 0 0 5rem 0;
-
+  padding: 3rem 3.5%;
+  background: $white;
+  border-radius: .35rem;
+  .title {
+    color: $dark;
+    text-align: center;
+  }
 }
 
+.field {
+  margin: .5rem 0 1.5rem 0;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  background: $light;
+  border: 1px solid darken($light, 5%);
+  border-radius: .35rem;
+  margin-top: .5rem;
+}
+
+input[type=”file”] {
+  margin-top: .5rem;
+}
+
+textarea {
+  height: 8rem;
+}
 
 @import 'normalize';
 @import 'welcome';
